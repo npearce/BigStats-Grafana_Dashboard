@@ -18,7 +18,7 @@
     "gnetId": null,
     "graphTooltip": 0,
     "id": 2,
-    "iteration": 1537120254002,
+    "iteration": 1537129588787,
     "links": [],
     "panels": [
       {
@@ -61,7 +61,7 @@
             "hide": false,
             "refCount": 0,
             "refId": "A",
-            "target": "aliasByNode(averageSeriesWithWildcards(stats.gauges.$BigStatsDevice.device.cpu{*}.*), 4, 5)",
+            "target": "aliasByNode(averageSeriesWithWildcards(stats.gauges.$BigStatsDevice.device.cpu*.{cpuUser,cpuSystem}), 4, 5)",
             "textEditor": true
           }
         ],
@@ -144,8 +144,8 @@
           {
             "refCount": 0,
             "refId": "A",
-            "target": "aliasByNode(stats.gauges.$BigStatsDevice.services.$BigStatsTenant.*.{clientside_curConns,clientside_maxConns}, 5, 6)",
-            "textEditor": false
+            "target": "aliasByNode(stats.gauges.$BigStatsDevice.services.$BigStatsTenant.*.*Conns 5, 6)",
+            "textEditor": true
           }
         ],
         "thresholds": [],
@@ -417,6 +417,7 @@
         {
           "allValue": null,
           "current": {
+            "tags": [],
             "text": "ip-172-31-1-20-us-west-1-compute-internal",
             "value": "ip-172-31-1-20-us-west-1-compute-internal"
           },
@@ -451,8 +452,8 @@
         {
           "allValue": null,
           "current": {
-            "text": "All",
-            "value": "$__all"
+            "text": "Tenant_01-App1",
+            "value": "Tenant_01-App1"
           },
           "datasource": "$BigStats_Datasource",
           "hide": 0,
@@ -474,9 +475,9 @@
         {
           "allValue": null,
           "current": {
-            "text": "All",
+            "text": "-Tenant_01-App1-172-31-4-11_80",
             "value": [
-              "$__all"
+              "-Tenant_01-App1-172-31-4-11_80"
             ]
           },
           "datasource": "$BigStats_Datasource",
@@ -487,39 +488,14 @@
           "name": "BigStatsService",
           "options": [
             {
-              "selected": true,
+              "selected": false,
               "text": "All",
               "value": "$__all"
             },
             {
-              "selected": false,
-              "text": "-Common-172-31-4-200_80",
-              "value": "-Common-172-31-4-200_80"
-            },
-            {
-              "selected": false,
-              "text": "-Tenant100-A100-10-90-3-16_8080",
-              "value": "-Tenant100-A100-10-90-3-16_8080"
-            },
-            {
-              "selected": false,
+              "selected": true,
               "text": "-Tenant_01-App1-172-31-4-11_80",
               "value": "-Tenant_01-App1-172-31-4-11_80"
-            },
-            {
-              "selected": false,
-              "text": "-Tenant_03-App3-172-31-4-31_80",
-              "value": "-Tenant_03-App3-172-31-4-31_80"
-            },
-            {
-              "selected": false,
-              "text": "-Tenant_07-App7-172-31-4-71_80",
-              "value": "-Tenant_07-App7-172-31-4-71_80"
-            },
-            {
-              "selected": false,
-              "text": "-Tenant_08-App8-172-31-4-81_80",
-              "value": "-Tenant_08-App8-172-31-4-81_80"
             }
           ],
           "query": "stats.gauges.$BigStatsDevice.services.$BigStatsTenant.*",
@@ -535,9 +511,9 @@
         {
           "allValue": null,
           "current": {
-            "text": "All",
+            "text": "-Tenant_01-App1-web_pool1",
             "value": [
-              "$__all"
+              "-Tenant_01-App1-web_pool1"
             ]
           },
           "datasource": "$BigStats_Datasource",
@@ -548,39 +524,14 @@
           "name": "BigStatsPool",
           "options": [
             {
-              "selected": true,
+              "selected": false,
               "text": "All",
               "value": "$__all"
             },
             {
-              "selected": false,
-              "text": "-Common-noAS3_POOL",
-              "value": "-Common-noAS3_POOL"
-            },
-            {
-              "selected": false,
-              "text": "-Tenant100-A100-p100",
-              "value": "-Tenant100-A100-p100"
-            },
-            {
-              "selected": false,
+              "selected": true,
               "text": "-Tenant_01-App1-web_pool1",
               "value": "-Tenant_01-App1-web_pool1"
-            },
-            {
-              "selected": false,
-              "text": "-Tenant_03-App3-web_pool3",
-              "value": "-Tenant_03-App3-web_pool3"
-            },
-            {
-              "selected": false,
-              "text": "-Tenant_07-App7-web_pool7",
-              "value": "-Tenant_07-App7-web_pool7"
-            },
-            {
-              "selected": false,
-              "text": "-Tenant_08-App8-web_pool8",
-              "value": "-Tenant_08-App8-web_pool8"
             }
           ],
           "query": "stats.gauges.$BigStatsDevice.services.$BigStatsTenant.$BigStatsService.-*",
@@ -627,5 +578,5 @@
     "timezone": "",
     "title": "BigStats Dashboard",
     "uid": "J5mX5KTmz",
-    "version": 29
+    "version": 30
   }
