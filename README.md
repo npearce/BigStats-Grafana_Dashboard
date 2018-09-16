@@ -2,9 +2,10 @@
 
 Grafana Dashboards for the BigStats telemetry exporter.
 
-Requires F5 BIG-IP telemtry exporter, BigStats:
 
-<img align="right" width="150px" src="BigStats-300dpi.png" alt="BigStats_Logo"/>
+<img align="right" width="150px" src="_static/BigStats-300dpi.png" alt="BigStats_Logo"/>
+
+Requires F5 BIG-IP telemetry exporter, BigStats:
 
 [https://github.com/f5devcentral/BigStats](https://github.com/f5devcentral/BigStats)
 
@@ -22,6 +23,10 @@ BigStats - Overview DB
 |- Tenant: Variable
 |- Pool: variable
 ```
+
+## Install
+
+You can paste the JSON input right into a Grafana. Will add this to the Grafana community once v0.1 is ready for release.
 
 <!--
 ## Grafana Privisioning
