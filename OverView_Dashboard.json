@@ -16,7 +16,7 @@
     "gnetId": null,
     "graphTooltip": 0,
     "id": 2,
-    "iteration": 1537120253978,
+    "iteration": 1537120253994,
     "links": [],
     "panels": [
       {
@@ -142,8 +142,8 @@
           {
             "refCount": 0,
             "refId": "A",
-            "target": "stats.gauges.$BigStatsDevice.services.$BigStatsTenant.*.{clientside_curConns,clientside_maxConns}",
-            "textEditor": true
+            "target": "aliasByNode(stats.gauges.$BigStatsDevice.services.$BigStatsTenant.*.{clientside_curConns,clientside_maxConns}, 5, 6)",
+            "textEditor": false
           }
         ],
         "thresholds": [],
@@ -436,12 +436,12 @@
         {
           "allValue": null,
           "current": {
-            "text": "Tenant_01-App1",
-            "value": "Tenant_01-App1"
+            "text": "All",
+            "value": "$__all"
           },
           "datasource": "Graphite",
           "hide": 0,
-          "includeAll": false,
+          "includeAll": true,
           "label": null,
           "multi": false,
           "name": "BigStatsTenant",
@@ -459,20 +459,52 @@
         {
           "allValue": null,
           "current": {
-            "text": "-Tenant_01-App1-172-31-4-11_80",
-            "value": "-Tenant_01-App1-172-31-4-11_80"
+            "text": "All",
+            "value": [
+              "$__all"
+            ]
           },
           "datasource": "Graphite",
           "hide": 0,
-          "includeAll": false,
+          "includeAll": true,
           "label": null,
-          "multi": false,
+          "multi": true,
           "name": "BigStatsService",
           "options": [
             {
               "selected": true,
+              "text": "All",
+              "value": "$__all"
+            },
+            {
+              "selected": false,
+              "text": "-Common-172-31-4-200_80",
+              "value": "-Common-172-31-4-200_80"
+            },
+            {
+              "selected": false,
+              "text": "-Tenant100-A100-10-90-3-16_8080",
+              "value": "-Tenant100-A100-10-90-3-16_8080"
+            },
+            {
+              "selected": false,
               "text": "-Tenant_01-App1-172-31-4-11_80",
               "value": "-Tenant_01-App1-172-31-4-11_80"
+            },
+            {
+              "selected": false,
+              "text": "-Tenant_03-App3-172-31-4-31_80",
+              "value": "-Tenant_03-App3-172-31-4-31_80"
+            },
+            {
+              "selected": false,
+              "text": "-Tenant_07-App7-172-31-4-71_80",
+              "value": "-Tenant_07-App7-172-31-4-71_80"
+            },
+            {
+              "selected": false,
+              "text": "-Tenant_08-App8-172-31-4-81_80",
+              "value": "-Tenant_08-App8-172-31-4-81_80"
             }
           ],
           "query": "stats.gauges.$BigStatsDevice.services.$BigStatsTenant.*",
@@ -488,21 +520,52 @@
         {
           "allValue": null,
           "current": {
-            "tags": [],
-            "text": "-Tenant_01-App1-web_pool1",
-            "value": "-Tenant_01-App1-web_pool1"
+            "text": "All",
+            "value": [
+              "$__all"
+            ]
           },
           "datasource": "Graphite",
           "hide": 0,
-          "includeAll": false,
+          "includeAll": true,
           "label": null,
-          "multi": false,
+          "multi": true,
           "name": "BigStatsPool",
           "options": [
             {
               "selected": true,
+              "text": "All",
+              "value": "$__all"
+            },
+            {
+              "selected": false,
+              "text": "-Common-noAS3_POOL",
+              "value": "-Common-noAS3_POOL"
+            },
+            {
+              "selected": false,
+              "text": "-Tenant100-A100-p100",
+              "value": "-Tenant100-A100-p100"
+            },
+            {
+              "selected": false,
               "text": "-Tenant_01-App1-web_pool1",
               "value": "-Tenant_01-App1-web_pool1"
+            },
+            {
+              "selected": false,
+              "text": "-Tenant_03-App3-web_pool3",
+              "value": "-Tenant_03-App3-web_pool3"
+            },
+            {
+              "selected": false,
+              "text": "-Tenant_07-App7-web_pool7",
+              "value": "-Tenant_07-App7-web_pool7"
+            },
+            {
+              "selected": false,
+              "text": "-Tenant_08-App8-web_pool8",
+              "value": "-Tenant_08-App8-web_pool8"
             }
           ],
           "query": "stats.gauges.$BigStatsDevice.services.$BigStatsTenant.$BigStatsService.-*",
