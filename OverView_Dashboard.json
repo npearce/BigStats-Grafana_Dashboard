@@ -18,7 +18,7 @@
     "gnetId": null,
     "graphTooltip": 0,
     "id": 2,
-    "iteration": 1537129588787,
+    "iteration": 1537129588793,
     "links": [],
     "panels": [
       {
@@ -144,7 +144,7 @@
           {
             "refCount": 0,
             "refId": "A",
-            "target": "aliasByNode(stats.gauges.$BigStatsDevice.services.$BigStatsTenant.*.*Conns 5, 6)",
+            "target": "aliasByNode(stats.gauges.$BigStatsDevice.services.$BigStatsTenant.*.*Conns, 5, 6)",
             "textEditor": true
           }
         ],
@@ -402,8 +402,9 @@
       "list": [
         {
           "current": {
-            "text": "default",
-            "value": "default"
+            "tags": [],
+            "text": "Graphite",
+            "value": "Graphite"
           },
           "hide": 0,
           "label": null,
@@ -417,7 +418,6 @@
         {
           "allValue": null,
           "current": {
-            "tags": [],
             "text": "ip-172-31-1-20-us-west-1-compute-internal",
             "value": "ip-172-31-1-20-us-west-1-compute-internal"
           },
@@ -475,9 +475,9 @@
         {
           "allValue": null,
           "current": {
-            "text": "-Tenant_01-App1-172-31-4-11_80",
+            "text": "All",
             "value": [
-              "-Tenant_01-App1-172-31-4-11_80"
+              "$__all"
             ]
           },
           "datasource": "$BigStats_Datasource",
@@ -488,12 +488,12 @@
           "name": "BigStatsService",
           "options": [
             {
-              "selected": false,
+              "selected": true,
               "text": "All",
               "value": "$__all"
             },
             {
-              "selected": true,
+              "selected": false,
               "text": "-Tenant_01-App1-172-31-4-11_80",
               "value": "-Tenant_01-App1-172-31-4-11_80"
             }
@@ -511,9 +511,9 @@
         {
           "allValue": null,
           "current": {
-            "text": "-Tenant_01-App1-web_pool1",
+            "text": "All",
             "value": [
-              "-Tenant_01-App1-web_pool1"
+              "$__all"
             ]
           },
           "datasource": "$BigStats_Datasource",
@@ -524,12 +524,12 @@
           "name": "BigStatsPool",
           "options": [
             {
-              "selected": false,
+              "selected": true,
               "text": "All",
               "value": "$__all"
             },
             {
-              "selected": true,
+              "selected": false,
               "text": "-Tenant_01-App1-web_pool1",
               "value": "-Tenant_01-App1-web_pool1"
             }
@@ -578,5 +578,5 @@
     "timezone": "",
     "title": "BigStats Dashboard",
     "uid": "J5mX5KTmz",
-    "version": 30
+    "version": 31
   }
