@@ -26,7 +26,12 @@ BigStats - Overview DB
 
 ## Install
 
-You can paste the JSON input right into a Grafana. Will add this to the Grafana community once v0.1 is ready for release.
+Per these instructions: [Grafana Export / Import](http://docs.grafana.org/reference/export_import/)
+
+To import a Dashboard, in Grafana, open 'Dashboard Search and hit the 'Import' button...
+
+OR, Search for **BigStats** in Grafa Dashboards.
+
 
 <!--
 ## Grafana Privisioning
